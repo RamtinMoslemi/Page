@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="text/css" rel="stylesheet" media="all" href="ramtinmoslemi.github.io/style.css" />
@@ -10,3 +9,5 @@
 
 # Page
 Testing page
+</body> 
+</html>
