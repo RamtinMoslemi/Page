@@ -29,13 +29,13 @@ jobs:
 
       - name: Convert README.md to index.html
         run: |
-          # Convert README.md to index.html using Pandoc
-          pandoc README.md -f markdown -t html -s -o index.html
+          mkdir -p site
+          pandoc README.md -f markdown -t html -s -o site/index.html
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./index.html
+          path: ./site
 
   deploy:
     environment:
