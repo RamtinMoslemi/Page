@@ -32,6 +32,12 @@ jobs:
           mkdir -p site
           pandoc README.md -f markdown -t html -s -o site/index.html
 
+      - name: Copy Custom CSS
+        run: cp custom.css site/custom.css
+
+      - name: Update HTML to Link Custom CSS
+        run: sed -i '1s;^;<link rel="stylesheet" href="https://ramtinmoslemi.github.io/style.css">;' site/index.html
+
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
